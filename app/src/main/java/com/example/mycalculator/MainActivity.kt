@@ -64,6 +64,75 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun removeZeroAfterDot(result: String): String {
+        var vaule = result
+        if (result.contains(".0"))
+            vaule = result.substring(0, result.length - 2)
+        return vaule
+
+    }
+
+    fun onEqual(view: View) {
+        if (lastNumeric) {
+            var tvValue = tvInput.text.toString()
+
+            var prefix = ""
+            try {
+                if (tvValue.startsWith("-")) {
+                    prefix = "-"
+                    tvValue = tvValue.substring(1)
+
+                }
+                when {
+                    tvValue.contains("-") -> {
+                        val splitValue = tvValue.split("-")
+                        var one = splitValue[0]
+                        val two = splitValue[1]
+
+                        if (!prefix.isEmpty()) {
+                            one = prefix + one
+                        }
+                        tvInput.text = removeZeroAfterDot((one.toDouble() - two.toDouble()).toString())
+                    }
+                    tvValue.contains("+") -> {
+                        val splitValue = tvValue.split("+")
+                        var one = splitValue[0]
+                        val two = splitValue[1]
+
+                        if (!prefix.isEmpty()) {
+                            one = prefix + one
+                        }
+                        tvInput.text = removeZeroAfterDot((one.toDouble() + two.toDouble()).toString())
+                    }
+                    tvValue.contains("/") -> {
+                        val splitValue = tvValue.split("/")
+                        var one = splitValue[0]
+                        val two = splitValue[1]
+
+                        if (!prefix.isEmpty()) {
+                            one = prefix + one
+                        }
+                        tvInput.text = removeZeroAfterDot((one.toDouble() / two.toDouble()).toString())
+                    }
+                    tvValue.contains("*") -> {
+                        val splitValue = tvValue.split("*")
+                        var one = splitValue[0]
+                        var two = splitValue[1]
+
+                        if (!prefix.isEmpty()) {
+                            one = prefix + one
+                        }
+                        tvInput.text = removeZeroAfterDot((one.toDouble() * two.toDouble()).toString())
+                    }
+                }
+
+
+            } catch (e: ArithmeticException) {
+                e.printStackTrace()
+            }
+        }
+    }
+
     private fun showMsg(msg: String) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
     }
