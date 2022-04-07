@@ -55,6 +55,13 @@ class MainActivity : AppCompatActivity() {
         lastDot = false
     }
 
+    fun delete(){
+        val removeLastChar = tvInput.text.toString()
+        if (removeLastChar.isNotEmpty()){
+            removeLastChar.dropLast(1)
+        }
+
+    }
 
     fun onDecimalPoint(view: View) {
         if (lastNumeric && !lastDot) {
