@@ -22,10 +22,10 @@
         android:padding="10dp"/>
 
     <LinearLayout
+        android:background="@color/black"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="10dp"
+        android:layout_weight="0.7"
         android:orientation="vertical">
 
         <!--row 1-->
@@ -33,12 +33,15 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:layout_margin="0dp"
             android:orientation="horizontal">
 
 
             <Button
+                android:padding="0dp"
                 android:id="@+id/btnSeven"
                 android:layout_width="0dp"
+                app:cornerRadius="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/btn_padding"
                 android:layout_weight="1"
@@ -52,6 +55,7 @@
                 android:layout_margin="@dimen/btn_padding"
                 android:layout_weight="1"
                 android:onClick="onDigit"
+                app:cornerRadius="0dp"
                 android:text="8" />
 
             <Button
@@ -60,6 +64,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/btn_padding"
                 android:layout_weight="1"
+                app:cornerRadius="0dp"
                 android:onClick="onDigit"
                 android:text="9" />
 
@@ -69,6 +74,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/btn_padding"
                 android:layout_weight="1"
+                app:cornerRadius="0dp"
                 android:onClick="onOperator"
                 android:text="/" />
 
@@ -89,6 +95,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/btn_padding"
                 android:layout_weight="1"
+                app:cornerRadius="0dp"
                 android:onClick="onDigit"
                 android:text="4" />
 
@@ -97,6 +104,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/btn_padding"
+                app:cornerRadius="0dp"
                 android:layout_weight="1"
                 android:onClick="onDigit"
                 android:text="5" />
@@ -107,6 +115,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/btn_padding"
                 android:layout_weight="1"
+                app:cornerRadius="0dp"
                 android:onClick="onDigit"
                 android:text="6" />
 
@@ -118,6 +127,7 @@
                 android:layout_margin="@dimen/btn_padding"
                 android:layout_weight="1"
                 android:onClick="onOperator"
+                app:cornerRadius="0dp"
                 android:text="*" />
 
 
@@ -137,6 +147,7 @@
                 android:layout_margin="@dimen/btn_padding"
                 android:layout_weight="1"
                 android:onClick="onDigit"
+                app:cornerRadius="0dp"
                 android:text="1" />
 
 
@@ -146,6 +157,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/btn_padding"
                 android:layout_weight="1"
+                app:cornerRadius="0dp"
                 android:onClick="onDigit"
                 android:text="2" />
 
@@ -154,6 +166,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/btn_padding"
+                app:cornerRadius="0dp"
                 android:layout_weight="1"
                 android:onClick="onDigit"
                 android:text="3" />
@@ -164,6 +177,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/btn_padding"
+                app:cornerRadius="0dp"
                 android:layout_weight="1"
                 android:onClick="onOperator"
                 android:text="-" />
@@ -182,6 +196,7 @@
                 android:id="@+id/btnDot"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                app:cornerRadius="0dp"
                 android:layout_margin="@dimen/btn_padding"
                 android:layout_weight="1"
                 android:onClick="onDecimalPoint"
@@ -193,6 +208,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/btn_padding"
+                app:cornerRadius="0dp"
                 android:layout_weight="1"
                 android:onClick="onDigit"
                 android:text="0" />
@@ -202,6 +218,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/btn_padding"
+                app:cornerRadius="0dp"
                 android:layout_weight="1"
                 android:onClick="onClear"
                 android:text="CLR" />
@@ -212,6 +229,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/btn_padding"
+                app:cornerRadius="0dp"
                 android:layout_weight="1"
                 android:onClick="onOperator"
                 android:text="+" />
@@ -230,6 +248,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.8"
                 android:layout_height="match_parent"
+                app:cornerRadius="0dp"
                 android:layout_margin="@dimen/btn_padding"
                 android:onClick="onEqual"
                 android:text="=" />
@@ -238,6 +257,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.248"
                 android:text="DEL"
+                app:cornerRadius="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/btn_padding"
                 android:onClick="onDelete"
