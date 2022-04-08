@@ -12,7 +12,8 @@
     <TextView
         android:id="@+id/tvInput"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
         android:background="#efefef"
         android:maxLength="12"
         android:textSize="48sp"
@@ -20,12 +21,11 @@
         android:text="0"
         android:padding="10dp"/>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="16dp"
+        android:padding="10dp"
         android:orientation="vertical">
 
         <!--row 1-->

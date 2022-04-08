@@ -82,8 +82,8 @@ class MainActivity : AppCompatActivity() {
     fun onEqual(view: View) {
         if (lastNumeric) {
             var tvValue = tvInput.text.toString()
-
             var prefix = ""
+
             try {
                 if (tvValue.startsWith("-")) {
                     prefix = "-"
@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity() {
                         var one = splitValue[0]
                         val two = splitValue[1]
 
-                        if (!prefix.isEmpty()) {
+                        if (prefix.isNotEmpty()) {
                             one = prefix + one
                         }
                         tvInput.text = removeZeroAfterDot((one.toDouble() - two.toDouble()).toString())
@@ -106,7 +106,7 @@ class MainActivity : AppCompatActivity() {
                         var one = splitValue[0]
                         val two = splitValue[1]
 
-                        if (!prefix.isEmpty()) {
+                        if (prefix.isNotEmpty()) {
                             one = prefix + one
                         }
                         tvInput.text = removeZeroAfterDot((one.toDouble() + two.toDouble()).toString())
@@ -116,7 +116,7 @@ class MainActivity : AppCompatActivity() {
                         var one = splitValue[0]
                         val two = splitValue[1]
 
-                        if (!prefix.isEmpty()) {
+                        if (prefix.isNotEmpty()) {
                             one = prefix + one
                         }
                         tvInput.text = removeZeroAfterDot((one.toDouble() / two.toDouble()).toString())
@@ -124,23 +124,17 @@ class MainActivity : AppCompatActivity() {
                     tvValue.contains("*") -> {
                         val splitValue = tvValue.split("*")
                         var one = splitValue[0]
-                        var two = splitValue[1]
+                        val two = splitValue[1]
 
-                        if (!prefix.isEmpty()) {
+                        if (prefix.isNotEmpty()) {
                             one = prefix + one
                         }
                         tvInput.text = removeZeroAfterDot((one.toDouble() * two.toDouble()).toString())
                     }
                 }
-
-
             } catch (e: ArithmeticException) {
                 e.printStackTrace()
             }
         }
-    }
-
-    private fun showMsg(msg: String) {
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
     }
 }
