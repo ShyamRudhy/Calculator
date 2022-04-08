@@ -55,10 +55,10 @@ class MainActivity : AppCompatActivity() {
         lastDot = false
     }
 
-    fun delete(){
+    fun onDelete(view : View){
         val removeLastChar = tvInput.text.toString()
-        if (removeLastChar.isNotEmpty()){
-            removeLastChar.dropLast(1)
+        if (removeLastChar != "0"){
+            tvInput.text = removeLastChar.dropLast(1)
         }
 
     }
